@@ -1,0 +1,14 @@
+service: singular-data-api
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: prod
+  region: us-east-2
+
+functions:
+  singular-data:
+    handler: index.handler
+    url: true
+    timeout: 70
